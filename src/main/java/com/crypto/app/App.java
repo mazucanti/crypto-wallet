@@ -1,13 +1,11 @@
 package com.crypto.app;
+import java.util.List;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+public class App {
+    public static void main(String[] args) {
+        Wallet wallet = new Wallet("src/main/resources/wallet.csv");
+        List<String[]> w = wallet.getWalletValues();
+        System.out.println("Hello World!");
     }
 }
