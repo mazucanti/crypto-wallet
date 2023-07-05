@@ -6,10 +6,14 @@ import org.junit.Test;
 
 public class WalletTest {
 
-    private Wallet wallet = new Wallet("src/main/resources/wallet.csv");
+    private Wallet wallet = new Wallet();
 
     @Test
     public void parsedCSV() {
-        assertTrue(wallet.walletValues != null);
+        wallet.loadFile("src/main/resources/wallet.csv");
+        assertTrue(
+                wallet.getWalletPrices() != null
+                        && wallet.getWalletQuantity() != null
+                        && wallet.getWalletSymbols() != null);
     }
 }
