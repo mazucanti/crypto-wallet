@@ -17,5 +17,4 @@ buildNumber.properties
 .classpath
 .vscode/settings.json
 .gitignore
-src/main/resources/wallet.csv
 src/main/logs
