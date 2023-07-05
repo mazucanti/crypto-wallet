@@ -32,7 +32,6 @@ public class App {
         wallet.loadFile(filePath);
 
         List<Double> currentPrices = runRequests(wallet);
-        System.out.println(currentPrices);
 
         for (int i = 0; i < currentPrices.size(); i++) {
             Double performance = currentPrices.get(i) / wallet.getWalletPrices().get(i);
